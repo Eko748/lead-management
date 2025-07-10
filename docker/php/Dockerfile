@@ -12,9 +12,13 @@ RUN apk update && apk add --no-cache \
     postgresql-dev \
     && docker-php-ext-install pdo pdo_pgsql
 
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
 WORKDIR /var/www
 
-COPY start.sh /usr/local/bin/start.sh
-RUN chmod +x /usr/local/bin/start.sh
+COPY . .
 
-ENTRYPOINT ["start.sh"]
+COPY docker/php/start.sh /start.sh
+RUN chmod +x /start.sh
+
+ENTRYPOINT ["/start.sh"]

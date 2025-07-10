@@ -1,7 +1,8 @@
 services:
     api:
         build:
-            context: ./docker/php
+            context: .
+            dockerfile: docker/php/Dockerfile
         container_name: lead_management_api
         volumes:
             - .:/var/www

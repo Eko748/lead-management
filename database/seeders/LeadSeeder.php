@@ -14,16 +14,16 @@ class LeadSeeder extends Seeder
     {
         $userIds = User::pluck('id')->toArray();
 
-        $createdByUsers = collect($userIds)->shuffle()->take(50)->values();
-        $updatedByUsers = collect($userIds)->shuffle()->take(25)->values();
-        $deletedByUsers = collect($userIds)->shuffle()->take(25)->values();
+        $createdByUsers = collect($userIds)->shuffle()->values();
+        $updatedByUsers = collect($userIds)->shuffle()->values();
+        $deletedByUsers = collect($userIds)->shuffle()->values();
 
         foreach (range(1, 100) as $i) {
             Lead::create([
-                'name' => fake()->name(),
-                'email' => fake()->unique()->safeEmail(),
-                'phone' => '08' . rand(100000000, 999999999),
-                'status' => collect(LeadStatus::cases())->random()->value,
+                'name' => "Lead $i",
+                'email' => "lead$i@example.com",
+                'phone' => "08123456" . str_pad($i, 4, '0', STR_PAD_LEFT),
+                'status' => LeadStatus::cases()[$i % count(LeadStatus::cases())]->value,
                 'created_by' => $createdByUsers->random(),
                 'updated_by' => $updatedByUsers->random(),
                 'deleted_by' => $i <= 25 ? $deletedByUsers->random() : null,
