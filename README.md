@@ -73,8 +73,6 @@ exit
 http://localhost:8080/api/leads
 ```
 
--   [📝 View Response](https://github.com/Eko748/lead-management-api/blob/main/public/json/lead_get.json)
-
 ---
 
 ## 📘 Example API Responses
