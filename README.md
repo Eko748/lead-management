@@ -84,8 +84,43 @@ exit
 
 ### 7. Access the API
 
-```bash
+````bash
 http://localhost:8080/api/leads
+
+---
+
+## 📘 Lead API Documentation Request Body (JSON)
+
+### 📥 Create Lead - POST /api/leads
+
+```bash
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "phone": "08123456789",
+  "status": "new"
+}
+
+````
+
+### ♻️ Update Lead - PUT /api/leads/{public_id}
+
+```bash
+{
+  "name": "Jane Doe",
+  "email": "jane@example.com",
+  "phone": "08987654321",
+  "status": "contacted"
+}
+
+```
+
+### 🔧 Partial Update Lead - PATCH /api/leads/{public_id}
+
+```bash
+{
+  "email": "newmail@example.com",
+}
 ```
 
 ---

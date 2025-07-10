@@ -37,7 +37,7 @@ class LeadService
         $data = $this->repository->find($publicId);
         if (!$data) return null;
 
-        $this->validate(array_merge(request()->query(), $input), $data->id);
+        $this->validate($input, $data->id);
         return $this->repository->update($data, $input);
     }
 
@@ -60,7 +60,10 @@ class LeadService
                 Rule::unique('lead', 'email')->ignore($id)
             ],
             'phone' => ($isPatch ? 'sometimes|nullable' : 'nullable') . '|string|max:20',
-            'status' => [$isPatch ? 'sometimes|nullable' : 'nullable', Rule::in(LeadStatus::values())],
+            'status' => [
+                $isPatch ? 'sometimes|nullable' : 'nullable',
+                Rule::in(['new', 'contacted', 'qualified', 'converted', 'rejected']),
+            ],
         ])->validate();
     }
 }

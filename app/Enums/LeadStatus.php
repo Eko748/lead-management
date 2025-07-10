@@ -2,6 +2,7 @@
 
 namespace App\Enums;
 
+
 enum LeadStatus: string
 {
     case NEW = 'new';
