@@ -348,6 +348,7 @@ http://localhost:8080/api/leads
 <summary>
 5. DELETE `/leads/:id`
 </summary>
+
 ```json
 {
     "code": 200,
