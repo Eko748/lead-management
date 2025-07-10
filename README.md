@@ -76,22 +76,17 @@ php artisan migrate --seed
 php artisan optimize:clear
 ```
 
-### 6. Exit the container
+### 6. Access the API
 
 ```bash
-exit
-```
-
-### 7. Access the API
-
-````bash
 http://localhost:8080/api/leads
+```
 
 ---
 
 ## 📘 Lead API Documentation Request Body (JSON)
 
-### 📥 Create Lead - POST /api/leads
+### 📥 Create Lead - POST `http://localhost:8080/api/leads`
 
 ```bash
 {
@@ -100,10 +95,9 @@ http://localhost:8080/api/leads
   "phone": "08123456789",
   "status": "new"
 }
+```
 
-````
-
-### ♻️ Update Lead - PUT /api/leads/{public_id}
+### ♻️ Update Lead - PUT `http://localhost:8080/api/leads/4e5d8c32-3a8b-4bdf-9d20-1a3f3e6d1f01`
 
 ```bash
 {
@@ -112,10 +106,9 @@ http://localhost:8080/api/leads
   "phone": "08987654321",
   "status": "contacted"
 }
-
 ```
 
-### 🔧 Partial Update Lead - PATCH /api/leads/{public_id}
+### 🔧 Partial Update Lead - PATCH `http://localhost:8080/api/leads/4e5d8c32-3a8b-4bdf-9d20-1a3f3e6d1f01`
 
 ```bash
 {
