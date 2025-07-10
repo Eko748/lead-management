@@ -31,14 +31,28 @@ This is a simple Lead Management RESTful API built with Laravel and PostgreSQL, 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Eko748/lead-management-api.git
-cd lead-management-api
+git clone https://github.com/Eko748/lead-management.git
+cd lead-management
 ```
 
-### 2. Copy the environment file
+### 2. Make sure the .env file is available
+
+> The `.env` file is required for database connection configuration and other purposes.  
+> If it doesn't exist, copy it from the example file:
 
 ```bash
 cp .env.example .env
+```
+
+> Or, if you want to build manually, make sure at least the following configuration is available in `.env`:
+
+```bash
+DB_CONNECTION=pgsql
+DB_HOST=db
+DB_PORT=5432
+DB_DATABASE=lead_management
+DB_USERNAME=postgres
+DB_PASSWORD=postgres
 ```
 
 ### 3. Start Docker containers
