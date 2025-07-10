@@ -1,0 +1,14 @@
+{
+    "code": 201,
+    "status": "Created",
+    "message": "Lead created",
+    "data": {
+        "name": "Lead 2",
+        "email": "lead1@mail.com",
+        "phone": "+6288121921933",
+        "status": "new",
+        "public_id": "e4f1b61d-7066-4747-a1e6-a16d23719e95",
+        "updated_at": "10-07-2025 15:53:55",
+        "created_at": "10-07-2025 15:53:55"
+    }
+}

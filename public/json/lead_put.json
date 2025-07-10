@@ -1,0 +1,14 @@
+{
+    "code": 200,
+    "status": "OK",
+    "message": "Lead updated",
+    "data": {
+        "public_id": "4e5d8c32-3a8b-4bdf-9d20-1a3f3e6d1f01",
+        "name": "Lead 1A",
+        "email": "lead1a@mail.com",
+        "phone": "088012912121",
+        "status": "contacted",
+        "created_at": "10-07-2025 15:04:43",
+        "updated_at": "10-07-2025 15:29:41"
+    }
+}
