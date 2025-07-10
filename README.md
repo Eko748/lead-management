@@ -14,18 +14,6 @@ This is a simple Lead Management RESTful API built with Laravel and PostgreSQL, 
 
 ---
 
-## 📂 Folder Structure
-
--   `storage/app/public/json/`
-    -   Contains sample responses for all API endpoints:
-        -   `lead_get.json` – response from GET `/leads`
-        -   `lead_post.json` – response from POST `/leads`
-        -   `lead_patch.json` – response from PATCH `/leads/:id`
-        -   `lead_put.json` – response from PUT `/leads/:id`
-        -   `lead_delete.json` – response from DELETE `/leads/:id`
-
----
-
 ## 📦 Running Locally with Docker
 
 ### 1. Clone the repository
@@ -115,6 +103,18 @@ http://localhost:8080/api/leads
   "email": "newmail@example.com",
 }
 ```
+
+---
+
+## 📂 Folder Structure JSON Response
+
+-   `public/json/`
+    -   Contains sample responses for all API endpoints:
+        -   `lead_get.json` – response from GET `/leads`
+        -   `lead_post.json` – response from POST `/leads`
+        -   `lead_patch.json` – response from PATCH `/leads/:id`
+        -   `lead_put.json` – response from PUT `/leads/:id`
+        -   `lead_delete.json` – response from DELETE `/leads/:id`
 
 ---
 
