@@ -73,6 +73,7 @@ docker exec -it lead_management_api bash
 composer install
 php artisan key:generate
 php artisan migrate --seed
+php artisan optimize:clear
 ```
 
 ### 6. Exit the container
